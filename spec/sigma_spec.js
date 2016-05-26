@@ -1,21 +1,21 @@
 describe("squareSum", function(){
   it("1からその数までの二乗和を返す", function(){
     expect(squareSum(10)).to.be(385);
-    expect(squareSum(1000)).to.be(33383500);
+    expect(squareSum(1000)).to.be(333833500);
   });
 });
 
 describe("squareSum2", function(){
   context("引数が1以上の場合", function(){
     it("1からその数までの二乗和を返す", function(){
-      expect(squareSum(10)).to.be(385);
-      expect(squareSum(1000)).to.be(33383500);
+      expect(squareSum2(10)).to.be(385);
+      expect(squareSum2(1000)).to.be(333833500);
     });
   });
   context("引数が1より小さい場合", function(){
     it("その数から1までの二乗和を返す", function(){
-      expect(squareSum(-10)).to.be(386);
-      expect(squareSum(-1000)).to.be(33383501);
+      expect(squareSum2(-10)).to.be(386);
+      expect(squareSum2(-1000)).to.be(333833501);
     });
   });
 });
@@ -51,7 +51,7 @@ describe("totalProfit", function(){
     });
   });
 
-  contet("それ以外", function(){
+  context("それ以外", function(){
     it("引数1の総和から、引数2の総和を引く", function(){
       expect(totalProfit(NULL, A)).to.be(s(NULL, A));
     });
